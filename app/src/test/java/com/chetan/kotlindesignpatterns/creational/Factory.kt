@@ -1,4 +1,4 @@
-package com.chetan.kotlindesignpatterns
+package com.chetan.kotlindesignpatterns.creational
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
@@ -17,7 +17,7 @@ object CurrencyFactory{
 
     fun currencyForCountry(country: Country) : Currency =
              when(country){
-                is Spain-> Currency("EUR")
+                is Spain -> Currency("EUR")
                 is USA -> Currency("USD")
                 is Greece -> Currency("EUR")
                 is Country.Canada -> Currency("CAD")

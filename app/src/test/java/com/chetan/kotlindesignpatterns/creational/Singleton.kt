@@ -1,4 +1,4 @@
-package com.chetan.kotlindesignpatterns
+package com.chetan.kotlindesignpatterns.creational
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test

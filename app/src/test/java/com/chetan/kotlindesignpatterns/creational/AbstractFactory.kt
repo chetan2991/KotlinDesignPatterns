@@ -1,4 +1,4 @@
-package com.chetan.kotlindesignpatterns
+package com.chetan.kotlindesignpatterns.creational
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
@@ -11,7 +11,7 @@ class NetworkDataSource : DataSource
 abstract class DataSourceFactory{
     abstract fun makeDataSource() : DataSource
     companion object {
-        inline fun <reified T : DataSource > createFactory() : DataSourceFactory =
+        inline fun <reified T : DataSource> createFactory() : DataSourceFactory =
             when(T::class){
                 DataBaseDataSource::class -> DataBaseFactory()
                 NetworkDataSource::class -> NetworkFactory()
